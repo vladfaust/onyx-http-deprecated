@@ -1,5 +1,7 @@
-# Powerful framework for modern applications. See [onyxframework.org](https://onyxframework.org).
-class Onyx
+# Enjoy the performance 💪
+#
+# Visit [onyxframework.org](https://onyxframework.org)
+module Onyx
   module HTTP
   end
 end
