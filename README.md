@@ -21,7 +21,7 @@ Thanks to all my patrons, I can continue working on beautiful Open Source Softwa
 
 ## About 👋
 
-Onyx::HTTP is a collection of [`HTTP::Handler`](https://crystal-lang.org/api/0.27.2/HTTP/Handler.html)'s to use in web [Crystal](https://crystal-lang.org/) applications. It also includes a convenient [`HTTP::Server`](https://crystal-lang.org/api/0.27.2/HTTP/Server.html) wrapper. Onyx::HTTP shard serves as a foundation for higher-level Onyx components, such as [Onyx::REST](https://github.com/onyxframework/rest), but it can definetely be used as a stand-alone library.
+Onyx::HTTP is a collection of [`HTTP::Handler`](https://crystal-lang.org/api/latest/HTTP/Handler.html)'s to use in web [Crystal](https://crystal-lang.org/) applications. It also includes a convenient [`HTTP::Server`](https://crystal-lang.org/api/latest/HTTP/Server.html) wrapper. Onyx::HTTP shard serves as a foundation for higher-level Onyx components, such as [Onyx::REST](https://github.com/onyxframework/rest), but it can definetely be used as a stand-alone library.
 
 ## Installation 📥
 
@@ -38,11 +38,11 @@ This shard follows [Semantic Versioning v2.0.0](http://semver.org/), so check [r
 
 ## Usage 💻
 
-Onyx::HTTP includes multiple useful [`HTTP::Handler`](https://crystal-lang.org/api/0.27.2/HTTP/Handler.html)s and an [`HTTP::Server`](https://crystal-lang.org/api/0.27.2/HTTP/Server.html) wrapper. If you don't know anything about the Crystal HTTP server, then check out its [official docs](https://crystal-lang.org/reference/overview/http_server.html) and [API](https://crystal-lang.org/api/0.27.2/HTTP/Server.html) before continuing.
+Onyx::HTTP includes multiple useful [`HTTP::Handler`](https://crystal-lang.org/api/latest/HTTP/Handler.html)s and an [`HTTP::Server`](https://crystal-lang.org/api/latest/HTTP/Server.html) wrapper. If you don't know anything about the Crystal HTTP server, then check out its [official docs](https://crystal-lang.org/reference/overview/http_server.html) and [API](https://crystal-lang.org/api/latest/HTTP/Server.html) before continuing.
 
 ### Simple server
 
-Start with a simple [`Onyx::HTTP::Server`](https://api.onyxframework.org/Onyx/HTTP/Server.html) example:
+Start with a simple [`Onyx::HTTP::Server`](https://api.onyxframework.org/http/Onyx/HTTP/Server.html) example:
 
 ```crystal
 require "onyx-http"
@@ -64,7 +64,7 @@ Hello Onyx
 
 ### Logging
 
-We'd like to see the actual request in the STDOUT. Use [`Onyx::HTTP::Logger`](https://api.onyxframework.org/Onyx/HTTP/Logger.html) for that:
+We'd like to see the actual request in the STDOUT. Use [`Onyx::HTTP::Logger`](https://api.onyxframework.org/http/Onyx/HTTP/Logger.html) for that:
 
 ```crystal
 require "onyx-http"
@@ -88,7 +88,7 @@ Hello Onyx
 
 ### Request meta
 
-It's a good idea to add an ID to the request and also a time elapsed to process it for further analysis. There are [`Onyx::HTTP::RequestID`](https://api.onyxframework.org/Onyx/HTTP/RequestID.html) and [`Onyx::HTTP::ResponseTime`](https://api.onyxframework.org/Onyx/HTTP/ResponseTime.html) handlers:
+It's a good idea to add an ID to the request and also a time elapsed to process it for further analysis. There are [`Onyx::HTTP::RequestID`](https://api.onyxframework.org/http/Onyx/HTTP/RequestID.html) and [`Onyx::HTTP::ResponseTime`](https://api.onyxframework.org/http/Onyx/HTTP/ResponseTime.html) handlers:
 
 ```crystal
 require "onyx-http"
@@ -129,7 +129,7 @@ Hello Onyx
 
 ### CORS
 
-Modern APIs usually require proper [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) handling. It is achievable with [`Onyx::HTTP::CORS`](https://api.onyxframework.org/Onyx/HTTP/CORS.html):
+Modern APIs usually require proper [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) handling. It is achievable with [`Onyx::HTTP::CORS`](https://api.onyxframework.org/http/Onyx/HTTP/CORS.html):
 
 ```crystal
 require "onyx-http"
@@ -171,7 +171,7 @@ Hello Onyx
 
 ### Routing
 
-Almost every web application requires routing. It is quite simple with [`Onyx::HTTP::Router`](https://api.onyxframework.org/Onyx/HTTP/Router.html):
+Almost every web application requires routing. It is quite simple with [`Onyx::HTTP::Router`](https://api.onyxframework.org/http/Onyx/HTTP/Router.html):
 
 ```crystal
 require "onyx-http"
@@ -207,9 +207,9 @@ Knock-knock
 
 ### Rescuing
 
-By default, an unhandled exception would halt the request processing, put the error backtrace into `STDERR` and print `500 Internal Server Error` into the response body. We can change this behaviour with [`Onyx::HTTP::Rescuer`](https://api.onyxframework.org/Onyx/HTTP/Rescuer.html).
+By default, an unhandled exception would halt the request processing, put the error backtrace into `STDERR` and print `500 Internal Server Error` into the response body. We can change this behaviour with [`Onyx::HTTP::Rescuer`](https://api.onyxframework.org/http/Onyx/HTTP/Rescuer.html).
 
-This shard comes with [`Onyx::HTTP::Rescuers::Standard`](https://api.onyxframework.org/Onyx/HTTP/Rescuers/Standard.html), [`Onyx::HTTP::Rescuers::Silent`](https://api.onyxframework.org/Onyx/HTTP/Rescuers/Silent.html) and [`Onyx::HTTP::Rescuers::RouteNotFound`](https://api.onyxframework.org/Onyx/HTTP/Rescuers/RouteNotFound.html):
+This shard comes with [`Onyx::HTTP::Rescuers::Standard`](https://api.onyxframework.org/http/Onyx/HTTP/Rescuers/Standard.html), [`Onyx::HTTP::Rescuers::Silent`](https://api.onyxframework.org/http/Onyx/HTTP/Rescuers/Silent.html) and [`Onyx::HTTP::Rescuers::RouteNotFound`](https://api.onyxframework.org/http/Onyx/HTTP/Rescuers/RouteNotFound.html):
 
 ```crystal
 require "onyx-http"
