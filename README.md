@@ -13,7 +13,7 @@ An HTTP framework for [Crystal](https://crystal-lang.org).
 
 Thanks to all my patrons, I can continue working on beautiful Open Source Software! 🙏
 
-[Lauri Jutila](https://github.com/ljuti)
+[Lauri Jutila](https://github.com/ljuti), [Alexander Maslov](https://seendex.ru)
 
 *You can become a patron too in exchange of prioritized support and other perks*
 
