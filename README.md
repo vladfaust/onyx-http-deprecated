@@ -31,7 +31,7 @@ Add this to your application's `shard.yml`:
 dependencies:
   onyx-http:
     github: onyxframework/http
-    version: ~> 0.1.1
+    version: ~> 0.2.0
 ```
 
 This shard follows [Semantic Versioning v2.0.0](http://semver.org/), so check [releases](https://github.com/onyxframework/http/releases) and change the `version` accordingly. Please visit [github.com/crystal-lang/shards](https://github.com/crystal-lang/shards) to know more about Crystal shards.
