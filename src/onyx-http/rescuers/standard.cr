@@ -63,7 +63,7 @@ module Onyx::HTTP
       def handle(context, error)
         io = IO::Memory.new
 
-        if id = context.request.id?
+        if id = context.request.id
           io << "[#{id[0...8]}] ".colorize(:dark_gray)
         end
 

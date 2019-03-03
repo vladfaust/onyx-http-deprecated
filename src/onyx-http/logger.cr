@@ -41,8 +41,8 @@ module Onyx::HTTP
     def call(context)
       started_at = Time.monotonic
 
-      if context.request.id?
-        request_id = "[#{context.request.id[0...8]}]".colorize(:dark_gray)
+      if id = context.request.id
+        request_id = "[#{id[0...8]}]".colorize(:dark_gray)
       end
 
       websocket = context.request.headers.includes_word?("Upgrade", "Websocket")
